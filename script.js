@@ -1,6 +1,7 @@
 const inputs = document.querySelectorAll("input, textarea");
 const errors = document.querySelectorAll(".error")
 const form = document.querySelector("form");
+const customAlert = document.querySelector(".alert")
 
 inputs.forEach((item) => {
     listener("blur", item);
@@ -15,6 +16,12 @@ form.addEventListener("submit", (event) => {
             // display an appropriate error message
             showError(item);
         }
+    }
+    if (form.checkValidity()) {
+        customAlert.style.display = "flex";
+        setTimeout(() => {
+            customAlert.style.display = "none";
+        }, 3000);
     }
 });
 
@@ -59,8 +66,14 @@ function listener(type, item) {
                 return;
             nextErrorSpan(item).textContent = "";
             nextErrorSpan(item).className = "error";
+            if (type === "blur") {
+                item.classList.remove("invalid");
+            }
         } else {
             showError(item);
+            if (type === "blur") {
+                item.classList.add("invalid");
+            }
         }
     });
 }

@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    outline: none;
 }
 
 :root {
@@ -89,8 +90,7 @@ input[type="checkbox"] {
     margin: 0 1rem 0 0.5rem
 }
 
-.required:after
- {
+.required:after {
     content: " *";
     color: var(--green);
 }
@@ -106,36 +106,117 @@ fieldset div {
 }
 
 
+
 /* invalid fields */
-input:user-invalid,
-textarea:user-invalid {
-  border: 1px solid var(--red);
-  background-color: var(--white);
-}
+
 
 input:focus:invalid {
-  outline: none;
+    outline: none;
 }
 
 /* error message styles */
 .error {
-  display: none;
-  width: 100%;
-  padding: 0;
-  margin-top: 0.2rem;
-  color: var(--red);
-  font-size: 90%;
+    display: none;
+    width: 100%;
+    padding: 0;
+    margin-top: 0.2rem;
+    color: var(--red);
+    font-size: 90%;
 }
 
 .error.active {
-  display: block;
+    display: block;
 }
 
 
-footer{
+footer {
     margin: 1rem 0 0 0;
 }
 
-.terms{
+.terms {
     margin-bottom: 0;
 }
+
+input,
+textarea {
+    padding: 0.5rem 1rem;
+}
+
+
+.invalid,
+input:user-invalid,
+textarea:user-invalid {
+    border: 1px solid var(--red);
+    background-color: var(--white);
+}
+
+.invalid:hover,
+input:hover:user-invalid,
+textarea:hover:user-invalid {
+    border: 2px solid var(--red);
+    background-color: var(--white);
+}
+
+.invalid:focus,
+input:focus:user-invalid,
+textarea:focus:user-invalid {
+    border: 2px solid var(--red);
+    background-color: var(--white);
+}
+
+input:hover,
+textarea:hover,
+fieldset>div:hover,
+textarea:hover {
+    border: 1px solid var(--green);
+}
+
+input:active,
+textarea:active,
+fieldset>div:active,
+textarea:active {
+    border: 2px solid var(--green);
+}
+
+input:focus,
+textarea:focus,
+fieldset>div:focus,
+textarea:focus {
+    border: 2px solid var(--green);
+    background-color: var(--light-green);
+}
+
+fieldset div:has(input:checked) {
+    border: 2px solid var(--green);
+    background-color: var(--light-green);
+}
+
+textarea {
+    resize: none;
+}
+
+.alert {
+    display: none;
+    position: fixed;
+    top: 0;
+    background-color: var(--dark-grey);
+    padding: 2rem;
+    color: var(--white);
+    width: fit-content;
+    border-radius: 1rem;
+    justify-self: center;
+    margin: 1rem;
+}
+
+.alert h1 {
+    margin: 0 0 0 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-left: 1rem;
+    align-self: center;
+}
+
+.alert div {
+    margin-bottom: 0.5rem;
+}
+

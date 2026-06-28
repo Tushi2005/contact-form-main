@@ -8,7 +8,7 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
-  
+
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,6 +32,13 @@
 </head>
 
 <body>
+  <div class="alert flex-column">
+    <div class="flex-row">
+      <img src="assets/images/icon-success-check.svg" alt="A succes icon">
+      <h1>Message Sent!</h1>
+    </div>
+    <p>Thanks for completing the form. We'll be in touch soon!</p>
+  </div>
   <form class="flex-column" novalidate>
     <h1>Contact Us</h1>
     <div class="flex-column">
@@ -51,7 +58,7 @@
         <input type="radio" name="querytype" id="general" required>
         <label for="general">General Enquiry</label>
       </div>
-      <div class="flex-row" box-border>
+      <div class="flex-row box-border">
         <input type="radio" name="querytype" id="support">
         <label for="support">Support Request</label>
       </div>
@@ -73,34 +80,7 @@
     Coded by <a href="#">Tuska Ádám</a>.
   </footer>
 
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>
-
-<!--
-  This field is required
-
-  This field is required
-
-  Email Address
-  Please enter a valid email address
-  This field is required
-
-  Query Type
-  General Enquiry
-
-  Please select a query type
-
-
-  This field is required
-
-
-  To submit this form, please consent to being contacted
-
-
-
-  Message Sent!
-  Thanks for completing the form. We'll be in touch soon!
-
--->
