@@ -1,27 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
   
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+    rel="stylesheet">
+
   <title>Frontend Mentor | Contact form</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 0.6875rem; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution {
+      font-size: 0.6875rem;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
   </style>
 </head>
+
 <body>
+  <form class="flex-column" novalidate>
+    <h1>Contact Us</h1>
+    <div class="flex-column">
+      <label for="fname" class="required">First Name</label>
+      <input type="text" id="fname" required>
+      <span class="error" aria-live="polite"></span>
+      <label for="lname" class="required">Last Name</label>
+      <input type="text" id="lname" required>
+      <span class="error" aria-live="polite"></span>
+    </div>
+    <label for="email" class="required">Email Address</label>
+    <input type="email" id="email" required>
+    <span class="error" aria-live="polite"></span>
+    <fieldset class="flex-column">
+      <legend class="required"> Query Type</legend>
+      <div class="flex-row box-border">
+        <input type="radio" name="querytype" id="general" required>
+        <label for="general">General Enquiry</label>
+      </div>
+      <div class="flex-row" box-border>
+        <input type="radio" name="querytype" id="support">
+        <label for="support">Support Request</label>
+      </div>
+      <span class="error" aria-live="polite"></span>
+    </fieldset>
+    <label for="message" class="required">Message</label>
+    <textarea name="message" id="message" required></textarea>
+    <span class="error" aria-live="polite"></span>
+    <div class="flex-row terms">
+      <input type="checkbox" id="term" required>
+      <label for="term" class="required">I consent to being contacted by the team</label>
+    </div>
+    <span class="error" aria-live="polite"></span>
+    <button type="submit">Submit</button>
+  </form>
 
-  Contact Us
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+    Coded by <a href="#">Tuska Ádám</a>.
+  </footer>
 
-  First Name
+<script src="script.js"></script>
+</body>
+
+</html>
+
+<!--
   This field is required
 
-  Last Name
   This field is required
 
   Email Address
@@ -30,23 +89,18 @@
 
   Query Type
   General Enquiry
-  Support Request
+
   Please select a query type
 
-  Message
+
   This field is required
 
-  I consent to being contacted by the team
+
   To submit this form, please consent to being contacted
 
-  Submit
+
 
   Message Sent!
   Thanks for completing the form. We'll be in touch soon!
-  
-  <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </footer>
-</body>
-</html>
+
+-->

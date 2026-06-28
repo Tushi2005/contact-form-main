@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Primary*/
+    --light-green: hsl(148, 38%, 91%);
+    --green: hwb(169 5% 51%);
+    --red: hsl(0, 66%, 54%);
+
+    /* Neutral*/
+    --dark-grey: hsl(187, 24%, 22%);
+    --grey: hsl(186, 15%, 59%);
+    --white: hsl(0, 0%, 100%);
+}
+
+body {
+    background-color: var(--light-green);
+    font-family: 'Karla';
+    margin: 1.5rem 1rem 0.5rem 1rem;
+    color: var(--dark-grey);
+    height: max-content;
+}
+
+form {
+    padding: 0rem 2rem 1rem 2rem;
+    background-color: var(--white);
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem;
+}
+
+.flex-column {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+}
+
+.flex-row {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+}
+
+fieldset {
+    border: none;
+}
+
+form>label,
+form>div,
+fieldset,
+button,
+h1,
+.flex-column>label {
+    margin: 1rem 0 0.5rem 0;
+}
+
+button {
+    align-self: center;
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+    background-color: var(--green);
+    border-radius: 0.5rem;
+    border: none;
+    color: var(--white);
+    font-weight: 700;
+}
+
+* input,
+textarea {
+    width: 100%;
+    border: 1px solid var(--dark-grey);
+    border-radius: 0.3rem;
+    height: 3rem;
+}
+
+textarea {
+    height: 10rem;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 1rem;
+    margin: 0 1rem 0 0.5rem
+}
+
+.required:after
+ {
+    content: " *";
+    color: var(--green);
+}
+
+fieldset div {
+    border: 1px solid var(--dark-grey);
+    border-radius: 0.3rem;
+    margin: 0.5rem 0;
+}
+
+.box-border {
+    border: 1px solid var(--dark-grey);
+}
+
+
+/* invalid fields */
+input:user-invalid,
+textarea:user-invalid {
+  border: 1px solid var(--red);
+  background-color: var(--white);
+}
+
+input:focus:invalid {
+  outline: none;
+}
+
+/* error message styles */
+.error {
+  display: none;
+  width: 100%;
+  padding: 0;
+  margin-top: 0.2rem;
+  color: var(--red);
+  font-size: 90%;
+}
+
+.error.active {
+  display: block;
+}
+
+
+footer{
+    margin: 1rem 0 0 0;
+}
+
+.terms{
+    margin-bottom: 0;
+}
