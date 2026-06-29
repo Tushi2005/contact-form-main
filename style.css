@@ -95,17 +95,11 @@ input[type="checkbox"] {
     color: var(--green);
 }
 
-fieldset div {
+.radio-field {
     border: 1px solid var(--dark-grey);
     border-radius: 0.3rem;
     margin: 0.5rem 0;
 }
-
-.box-border {
-    border: 1px solid var(--dark-grey);
-}
-
-
 
 /* invalid fields */
 
@@ -166,27 +160,27 @@ textarea:focus:user-invalid {
 
 input:hover,
 textarea:hover,
-fieldset>div:hover,
+.radio-field:hover,
 textarea:hover {
     border: 1px solid var(--green);
 }
 
 input:active,
 textarea:active,
-fieldset>div:active,
+.radio-field:active,
 textarea:active {
     border: 2px solid var(--green);
 }
 
 input:focus,
 textarea:focus,
-fieldset>div:focus,
+.radio-field:focus,
 textarea:focus {
     border: 2px solid var(--green);
     background-color: var(--light-green);
 }
 
-fieldset div:has(input:checked) {
+.radio-field:has(input:checked) {
     border: 2px solid var(--green);
     background-color: var(--light-green);
 }
@@ -220,3 +214,27 @@ textarea {
     margin-bottom: 0.5rem;
 }
 
+input[type="radio"],
+input[type="checkbox"] {
+    outline: none;
+    accent-color: var(--green);
+}
+
+
+@media (min-width: 700px) {
+    body {
+        padding: min(30rem, 8%);
+    }
+
+    .name-field {
+        display: flex;
+        gap: 1rem;
+        width: 100%;
+    }
+
+    .name-field>div {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 10rem;
+    }
+}
