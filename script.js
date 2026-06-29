@@ -19,6 +19,7 @@ form.addEventListener("submit", (event) => {
     }
     if (form.checkValidity()) {
         customAlert.style.display = "flex";
+        form.reset();
         setTimeout(() => {
             customAlert.style.display = "none";
         }, 3000);
